@@ -59,7 +59,7 @@ export default {
         opacity: 100,
         duration: 1000,
         easing: "easeInExpo",
-        delay: 500
+        delay: 1300
       });
   }
 };
