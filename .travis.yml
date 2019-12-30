@@ -11,16 +11,12 @@ install:
 
 script:
   - npm run build
-  - mkdir deploy
-  - cp -r index.html deploy/index.html
-  - mv ./dist deploy/dist
-  - cp ./public/* deploy/
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
-  local_dir: deploy/
+  local_dir: dist/
   fqdn: guiscaranse.me
   on:
     branch: master
